@@ -1,0 +1,53 @@
+{
+  "name": "coffeekraken-criticalcss",
+  "version": "1.0.0",
+  "description": "Simply and quickly generate the critical css depending on a list of pages to take as source",
+  "main": "bin/coffeekraken-criticalcss.js",
+  "homepage": "http://coffeekraken.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coffeekraken/criticalcss"
+  },
+  "bin": {
+    "coffeekraken-criticalcss": "./bin/coffeekraken-criticalcss.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "changelog": "git-changelog --version_name $npm_package_version  --app_name $npm_package_name --intro \"$npm_package_description\" --logo \".resources/coffeekraken-logo.jpg\""
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "keywords": [
+    "criticalcss",
+    "css",
+    "coffee",
+    "kraken",
+    "coffeekraken"
+  ],
+  "author": "Coffeekraken <hello@coffeekraken.io>",
+  "contributors": [
+    {
+      "name": "Olivier Bossel",
+      "email": "olivier.bossel@gmail.com",
+      "url": "http://olivierbossel.com"
+    }
+  ],
+  "license": "MIT",
+  "jest": {
+    "roots": [
+      "tests"
+    ]
+  },
+  "dependencies": {
+    "clean-css": "^4.2.1",
+    "commander": "^2.19.0",
+    "lodash.pluck": "^3.1.2",
+    "penthouse": "^1.9.2"
+  },
+  "devDependencies": {
+    "git-changelog": "^1.1.2",
+    "jest": "^23.3.0",
+    "pre-commit": "^1.2.2"
+  }
+}
